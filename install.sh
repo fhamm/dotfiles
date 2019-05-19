@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# BASH
+
+echo "Configuring Bash"
+
+cat bashrc >> .bashrc
+
+rm bashrc
+
+echo "Done!"
+
+# VIM
+
+echo "Configuring Vim..."
+
 # Download Vim configuration file
 
 GITFILE="https://raw.githubusercontent.com/fhamm/linux/master/vimrc"
@@ -44,5 +58,7 @@ else
         esac
     done
 fi
+
+rm vimrc
 
 echo "Done!"
