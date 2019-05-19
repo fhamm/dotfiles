@@ -29,6 +29,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
+Plug 'vim-scripts/AutoComplPop'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
 
