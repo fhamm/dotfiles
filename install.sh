@@ -4,7 +4,7 @@
 
 echo "Configuring Bash"
 
-cat bashrc >> .bashrc
+cat bashrc >> ~/.bashrc
 
 rm bashrc
 
@@ -20,7 +20,7 @@ GITFILE="https://raw.githubusercontent.com/fhamm/linux/master/vimrc"
 
 echo "Downloading file from $GITFILE"
 
-wget -q -O .tvimrc $GITFILE
+wget -q -O vimrc $GITFILE
 
 #if [ $? -ne 0 ]
 #then 
@@ -32,7 +32,7 @@ wget -q -O .tvimrc $GITFILE
 
 # Updates Vim configuration file
 
-VIMCONF=".vimrc"
+VIMCONF="~/.vimrc"
 
 if [ -f $VIMCONF ];
 then
@@ -41,8 +41,8 @@ then
     while true; do
         read -p "Overwrite [Y/n]?" yn
         case $yn in
-            [Yy]* ) mv .tvimrc .vimrc; break;;
-            [Nn]* ) rm .tvimrc; exit;;
+            [Yy]* ) mv vimrc ~/.vimrc; break;;
+            [Nn]* ) rm vimrc; exit;;
             * ) echo "Please answer [Y/n] .";;
         esac
     done
@@ -52,8 +52,8 @@ else
     while true; do
         read -p "Create vim configuration file [Y/n]?" yn
         case $yn in
-            [Yy]* ) mv .tvimrc .vimrc; break;;
-            [Nn]* ) rm .tvimrc; exit;;
+            [Yy]* ) mv vimrc ~/.vimrc; break;;
+            [Nn]* ) rm vimrc; exit;;
             * ) echo "Please answer [Y/n] .";;
         esac
     done
