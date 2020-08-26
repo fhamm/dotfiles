@@ -1,10 +1,7 @@
 #!/bin/bash
 
-#echo 'Google Drive wget tool'
-#echo 'Made by github.com/fhamm'
-
-# Read input
-#read -p 'Drive file link: ' url
+# Google Drive wget tool
+# Made by github.com/fhamm
 
 url=$1
 
@@ -24,5 +21,4 @@ fi
 fileid=$(echo $url | grep -o -P '(?<=d/).*(?=/view)')
 
 # Download file 
-
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate "https://docs.google.com/uc?export=download&id=${fileid}" -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=${fileid}" --content-disposition && rm -rf /tmp/cookies.txt
