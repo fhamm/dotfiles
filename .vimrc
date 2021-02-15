@@ -12,6 +12,11 @@ set smartindent
 
 set laststatus=2
 
+map <C-k> :cn<CR>
+map <C-j> :cp<CR>
+map <C-h> :cclose<CR>
+autocmd FileType python map <buffer> <C-l> :call flake8#Flake8()<CR>
+
 " PLUGINS
 " For help, check junegunn/vim-plug on GitHub
 
@@ -32,6 +37,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
-Plug 'andviro/flake8-vim'
+Plug 'nvie/vim-flake8'
 
 call plug#end()
