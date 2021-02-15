@@ -32,5 +32,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'tpope/vim-surround'
 Plug 'ervandew/supertab'
+Plug 'andviro/flake8-vim'
 
 call plug#end()
